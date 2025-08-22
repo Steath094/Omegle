@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { io, type Socket } from "socket.io-client";
 
-const URL = "https://omegle-bsbe.onrender.com:8080";
+const URL = "https://omegle-bsbe.onrender.com";
 
 function Room({
   name,
