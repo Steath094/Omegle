@@ -13,13 +13,20 @@ function Room({
   localAudioTrack: MediaStreamTrack;
   localVideoTrack: MediaStreamTrack;
 }) {
+    //@ts-ignore
   const [searchParams, setSearchParams] = useSearchParams();
+  //@ts-ignore
   const [socket, setSocket] = useState<Socket | null>(null);
   const [lobby, setLobby] = useState(true);
+  //@ts-ignore
   const [sendingPc, setSendingPc] = useState<RTCPeerConnection | null>(null);
+  //@ts-ignore
   const [receivingPc, setReceivingPc] = useState<RTCPeerConnection | null>(null);
+  //@ts-ignore
   const [remoteVideoTrack, setRemoteVideoTrack] = useState<MediaStreamTrack | null>(null);
+  //@ts-ignore
   const [remoteAudioTrack, setRemoteAudioTrack] = useState<MediaStreamTrack | null>(null);
+  //@ts-ignore
   const [remoteMediaStream, setRemoteMediaStream] = useState<MediaStream | null>(null);
   const remoteVideoRef = useRef<HTMLVideoElement | null>(null);
   const localVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -117,7 +124,7 @@ function Room({
         remoteVideoRef.current.play();
       }, 3000);
     });
-
+    //@ts-ignore
     socket.on("answer", ({ roomId, sdp }) => {
       setLobby(false);
       setSendingPc((pc) => {

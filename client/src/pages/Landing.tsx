@@ -71,7 +71,7 @@ function Landing() {
             )}
 
             {/* Bottom Controls */}
-            {/* <div className="absolute bottom-4 w-full flex justify-center space-x-4">
+            <div className="absolute bottom-4 w-full flex justify-center space-x-4">
               <button
                 onClick={() => setMicOn((prev) => !prev)}
                 className={`w-12 h-12 flex items-center justify-center rounded-full ${
@@ -88,7 +88,7 @@ function Landing() {
               >
                 {camOn ? <Video size={20} /> : <VideoOff size={20} />}
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
 
