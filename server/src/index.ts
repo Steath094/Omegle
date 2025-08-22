@@ -5,7 +5,7 @@ import { UserManager } from "./managers/UserManager.js";
 const app = express();
 const io = new Server({
     cors: {
-        origin: "*"
+        origin: "https://omegle-sandy.vercel.app/"
     }
 })
 
